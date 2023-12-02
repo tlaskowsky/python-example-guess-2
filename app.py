@@ -21,7 +21,14 @@ def guess():
             session.pop('number', None)  # Reset the number for a new game
     return render_template_string('''
         <html>
-            <body>
+            <head>
+                <style>
+                    body {
+                      background-color: #E6E6FA;
+                    }
+                </style>
+            </head>
+            <body >
                 <p>Guess a number between 1 and 100:</p>
                 <form method="post">
                     <input type="text" name="guess"/>
